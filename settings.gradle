@@ -1,0 +1,2 @@
+rootProject.name='Search GitHub'
+include ':app'
