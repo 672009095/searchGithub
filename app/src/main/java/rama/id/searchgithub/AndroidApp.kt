@@ -8,6 +8,7 @@ import rama.id.searchgithub.data.module.apiModule
 import rama.id.searchgithub.data.module.networkModule
 import rama.id.searchgithub.data.module.repositoryDataModule
 import rama.id.searchgithub.domain.module.useCaseModule
+import rama.id.searchgithub.presentation.module.viewModelModule
 
 @Suppress("unused")
 class AndroidApp : MultiDexApplication() {
@@ -25,8 +26,8 @@ class AndroidApp : MultiDexApplication() {
                     apiModule,
                     useCaseModule,
                     networkModule,
-                    repositoryDataModule
-                    //viewModelModule
+                    repositoryDataModule,
+                    viewModelModule
                 )
             )
         }

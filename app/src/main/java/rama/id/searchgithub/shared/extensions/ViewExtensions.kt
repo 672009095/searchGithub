@@ -1,4 +1,4 @@
-package rama.id.searchgithub.shared.extension
+package rama.id.searchgithub.shared.extensions
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

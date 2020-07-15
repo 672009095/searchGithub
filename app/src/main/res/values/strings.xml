@@ -1,3 +1,4 @@
-<resources>
 
+<resources>
+    <string name="hint">Search GitHub User</string>
 </resources>
