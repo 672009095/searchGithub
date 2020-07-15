@@ -48,7 +48,7 @@ class SearchActivityViewModel(
     suspend fun getLisOfSearchWithPage(page: Int?):
             Either<Throwable, List<Search>>{
         val params = mapOf(
-            UseCaseConstant.q to "pikachu",
+            UseCaseConstant.q to "octo",
             UseCaseConstant.PAGINATION to Pagination(10,page?:1)
         )
         return getListOfSearchWithPageUseCase.addParams(params)

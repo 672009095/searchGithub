@@ -11,6 +11,7 @@ import rama.id.searchgithub.shared.extensions.onLoading
 import kotlinx.android.synthetic.main.search_list_fragment.*
 import org.koin.android.ext.android.inject
 import org.koin.core.parameter.parametersOf
+import rama.id.searchgithub.shared.extensions.showToast
 
 class SearchListFragment : BaseFragment() {
     override val resourceLayout: Int = R.layout.search_list_fragment
@@ -38,6 +39,7 @@ class SearchListFragment : BaseFragment() {
             if (it.isInitial) {
                 shimmerView.onLoading(it is PagedState.Loading)
                 if (it !is PagedState.Loading) swipeRefresh.isRefreshing = false
+                if (it is PagedState.Failure) requireActivity().showToast(it.error.toString())
             } else {
                 if (it !is PagedState.Loading) swipeRefresh.isRefreshing = false
                 searchListAdapterPaged.currentState = it
