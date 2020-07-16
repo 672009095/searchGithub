@@ -20,7 +20,13 @@ class SearchListFragment : BaseFragment() {
     private val q by lazy { arguments?.getString(ARG_Q, "") }
     private val searchListAdapterPaged =
         SearchListAdapterPaged(
-            onItemClicked = {},
+            // set click on list user can be show pop or bring it to another view
+            onItemClicked = {requireActivity().showToast(
+                it.login +"\n"+
+                it.id + "\n"+
+                it.avatar_url
+            )},
+            // set pulldown refresh to refresh list
             onRetry = { viewModel.retryLoadAtLast() }
         )
 
@@ -44,6 +50,7 @@ class SearchListFragment : BaseFragment() {
                 if (it !is PagedState.Loading) swipeRefresh.isRefreshing = false
                 searchListAdapterPaged.currentState = it
             }
+
         })
 
 

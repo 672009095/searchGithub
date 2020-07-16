@@ -37,7 +37,7 @@ class SearchActivity : BaseActivity(){
             }
 
             override fun onQueryTextSubmit(query: String?): Boolean {
-                Toast.makeText(applicationContext, query, Toast.LENGTH_SHORT).show()
+                //Toast.makeText(applicationContext, query, Toast.LENGTH_SHORT).show()
                 lifecycleScope.launch{
                     //viewModel.getListOfSearch(query)
                     //viewModel.getLisOfSearchWithPage(1)

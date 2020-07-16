@@ -9,6 +9,10 @@ import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 import rama.id.searchgithub.R
 
+/**
+ * this class is for base default error message or default message info
+ * this class contains toast, snackbar, or maybe dialog
+ */
 fun Activity.showToast(@StringRes resourceId: Int) {
     Toast.makeText(this, resourceId, Toast.LENGTH_SHORT).show()
 }
